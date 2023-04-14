@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="libs/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Mania Pizza</title>
+   <link rel="icon" href="img/Logo.svg"> 
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+   <script src="js/jquery.maskedinput.js"></script>
+   <script src="js/jquery.validate.min.js"></script>
+</head>
+
+<body class="body dark">
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container">
+            <div class="header__logo">
+               <a class="header__logo-link" href="#">
+                  <img class="header__logo-img" src="img/Logo.svg" alt="logo">mania
+                  <img class="header__logo-gold logo" src="img/logo-gold.svg" alt="logo">
+               </a>
+            </div>
+            <div class="header__menu menu">
+               <div class="menu__icon">
+                  <span></span>
+               </div>
+               <nav class="menu__body">
+                  <ul class="menu__list">
+                     <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+                     <li class="menu__item"><a href="#" class="menu__link">Menu</a></li>
+                     <li class="menu__item"><a href="#" id="modal__link" class="menu__link">Specials & Coupons</a></li>
+                     <li class="menu__item"><a href="#" class="menu__link">Contact Us</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="header__modal hide ">
+               <div class="header__modal-content">
+                  <span class="header__close-modal"><i class="fa-solid fa-xmark"></i></span>
+                  <h2>Special Offers</h2>
+                  <p>Get a 35% discount with <span>HIMARS</span> promo code</p>
+                  <img class="header__modal-img" src="img/pizza.png" alt="special offer">
+               </div>
+            </div>
+
+         </div>
+      </header>
+      <main class="main">
+         <!-- Description -->
+         <section class="description">
+            <div class="description__container">
+               <div class="description__content">
+                  <h1 class="description__title">Pizza family</h1>
+                  <p class="description__text"> people disappoint, but pizza never does.</p>
+                  <div class="description__search">
+                     <input class="description__inp" type="text">
+                     <button class="description__search-btn">
+                        <img src="img/Search.svg" alt="Search location">
+                        Search Location
+                     </button>
+                  </div>
+                  <button class="description__btn">Try now</button>
+               </div>
+               <div class="description__img">
+                  <img src="img/1.svg" alt="">
+                  <div class="description__daytime">
+                     <img class="description__sun" src="img/sun.png" alt="switch to a light theme">
+                     <img class="description__moon hide" src="img/Moon.png" alt="switch to a dark theme">
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- menu-pizza -->
+         <section class="menu-pizza">
+            <div class="menu-pizza__images">
+               <img src="img/menu-pizza.png" alt="">
+            </div>
+            <div class="menu-pizza__container">
+               <h2 class="menu-pizza__title">menu</h2>
+               <div class="menu-pizza__content">
+                  <div class="menu-pizza__slice">
+                     <h3 class="menu-pizza__sub-title">Pizza by the slice</h3>
+                     <div class="menu-pizza__piece">
+                        <div class="menu-pizza__ingredients">
+                           <p>cheese</p>
+                           <p>bacon</p>
+                           <p>olives</p>
+                           <p>salami</p>
+                        </div>
+                        <div class="menu-pizza__line">
+                           <p></p>
+                           <p></p>
+                           <p></p>
+                           <p></p>
+                        </div>
+                        <div class="menu-pizza__price">
+                           <p>$1</p>
+                           <p>$1.2</p>
+                           <p>$1.5</p>
+                           <p>$1.9</p>
+                        </div>
+                     </div>
+                     <h3 class="menu-pizza__sub-title">Pizza by the slice</h3>
+                     <div class="menu-pizza__sub-piece">
+                        <div class="menu-pizza__dough">
+                           <p>Shortbread dough</p>
+                           <p>Puff pastry</p>
+                           <p>Thin dough</p>
+                           <p>Thick dough</p>
+                        </div>
+                        <div class="menu-pizza__sub-line">
+                           <p></p>
+                           <p></p>
+                           <p></p>
+                           <p></p>
+                        </div>
+                        <div class="menu-pizza__price">
+                           <p>$1.9</p>
+                           <p>$1.5</p>
+                           <p>$1.2</p>
+                           <p>$1</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="menu-pizza__gourmet">
+                     <h3 class="menu-pizza__sub-title">Gourmet Pizza</h3>
+                     <div class="menu-pizza__four-cheeses">
+                        <h4>Four cheeses <span>$4</span></h4>
+                        <p>Mozzarella cheese, Dor Blue cheese,
+                           Cream cheese, Gouda cheese, cream sauce.
+                        </p>
+                     </div>
+                     <div class="menu-pizza__francesca">
+                        <h4>Francesca <span>$5</span></h4>
+                        <p>Bacon, salami, mozzarella cheese, tomato,
+                           mushrooms, olives, special tomato sauce.
+                        </p>
+                     </div>
+                     <div class="menu-pizza__pepperoni">
+                        <h4>Pepperoni <span>$5.5</span></h4>
+                        <p>
+                           Pepperoni, mozzarella cheese, special tomato sauce, spices.
+                        </p>
+                     </div>
+                     <div class="menu-pizza__carbonara">
+                        <h4>Carbonara <span>$6</span></h4>
+                        <p>
+                           Bacon, ham, mushrooms, mozzarella cheese,
+                           pickled onions, olives, cream sauce.
+                        </p>
+                     </div>
+                     <div class="menu-pizza__btn">
+                        <button>Explore more</button>
+                     </div>
+
+
+                  </div>
+               </div>
+
+
+
+
+
+            </div>
+
+            <!-- <div class="menu-pizza__container">
+               <h2 class="menu-pizza__title">menu</h2>
+
+                  <div class="menu-pizza__gourmet">
+                     <h3 class="menu-pizza__sub-title">Gourmet Pizza</h3>
+                     <div class="menu-pizza__four-cheeses">
+                        <h4 class="name-pizza">Four cheeses <span>$4</span></h4>
+                        <p class="filling">Mozzarella cheese, Dor Blue cheese,
+                           Cream cheese, Gouda cheese, cream sauce.
+                        </p>
+                     </div>
+                     
+                    
+                     
+
+                     <div class="menu-pizza__btn">
+                        <button>Explore more</button>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+
+         </section>
+         <!-- pizza -->
+         <section class="pizza">
+            <div class="pizza__container">
+               <div class="pizza__title">
+                  <h2> pizza <span>of the month</span> </h2>
+                  <h3 class="pizza__sub-title">The big <span>bird</span></h3>
+               </div>
+               <div class="pizza__line"></div>
+               <div class="pizza__column">
+                  <div class="pizza__item">
+                     <ul class="pizza__list">
+                        <li>Meat Pizza</li>
+                        <li>Margarita Pizza</li>
+                        <li>Hawaiian Pizza</li>
+                        <li>Pepperoni Pizza</li>
+                        <li>Veggie Pizza</li>
+                        <li>Cheese Pizza</li>
+                     </ul>
+                  </div>
+                  <div class="pizza__btns">
+                     <button>Order online now</button>
+                     <button>See our menu</button>
+                  </div>
+               </div>
+
+            </div>
+         </section>
+         <!-- Reservation -->
+         <section class="reservation bg-light">
+            <div class="reservation__container">
+               <div class="reservation__form form-light">
+                  <form class="form" action="sender.php" method="post">
+                     <h2 class="form__title">Reservation</h2>
+                     <h5 class="form__sub-title">Book online or give us a call on +91 1111 222 333</h5>
+                     <h5 class="form__sub-title">Between 9:30 am - 10:00 pm</h5>
+                     <label class="form__label-name" for="name">
+                        Name
+                        <input class="form__name inps" type="text" id="name" name="name" required>
+                     </label>
+                     <label class="form__label-email" for="email">
+                        e-Mail
+                        <input class="form__email inps" type="text" name="email" required>
+
+                     </label>
+                     <label class="form__label-number" for="tel">
+                        people number
+                        <input class="form__number " type="text" name="phone" id="phone" required >
+                     </label>
+                     <label class="form__label-data" for="datetime">
+                        Date & time
+                        <input class="form__data inps" type="number" id="datetime" name="datetime">
+                     </label>
+                     <!-- <input value="Отправить" type="submit"> -->
+                     <button class="form__btn" type="button">Send Mail</button>
+                  </form>
+               </div>
+            </div>
+         </section>
+         <!-- Order -->
+         <section class="order">
+            <!-- Order-top -->
+            <div class="order-top">
+               <div class="order-top__container">
+                  <div class="order-top__logo">
+                     <a class="order-top__logo-link" href="#">
+                        <img class="order-top__logo-img" src="img/Logo.svg" alt="logo">mania
+                        <img class="order-top__logo-gold logo" src="img/logo-gold.svg" alt="logo">
+                     </a>
+                  </div>
+                  <div class="order-top__enter-office">
+                     <div class="order-top__help">
+                        <a class="order-top__help-link" href="#"> <img src="img/help.svg" alt=""> Help</a>
+                     </div>
+                     <div class="order-top__sign-in">
+                        <button class="order-top__sign-link"><img src="img/sign.svg" alt=""> Sign in </button>
+                     </div>
+                  </div>
+                  <div class="order-top__modal hide ">
+                     <div class="order-top__modal-content">
+                        <div class="order-top__login">
+                           <h2 class="order-top__title">sign in</h2>
+                           <span class="order-top__close-modal"><i class="fa-solid fa-xmark"></i></span>
+                           <div class="order-top__email">
+                              <label class="email-label">Email</label>
+                              <input class="email-field" type="email" spellcheck="false" onkeyup="validateEmail()">
+                              <span class="email-error"></span>
+                           </div>
+                           <div class="order-top__password">
+                              <label class="password-label">Password</label>
+                              <input class="password" type="password" onkeyup="validatePassword()">
+                              <span class="password-error"></span>
+                           </div>
+                           <div class="order-top__massager">
+                              <h4>or</h4>
+                              <div class="order-top__massager-btn">
+                                 <button><img src="img/facebook.svg" alt=""></button>
+                                 <button><img src="img/twitter.svg" alt=""></button>
+                                 <button><img src="img/google.svg" alt=""></button>
+                                 <button><img src="img/apple.svg" alt=""></button>
+                              </div>
+                              
+                           </div>
+                           
+
+
+                           <button class="order-top__btn">Sign In</button>
+                           <!-- <input type="submit" value="Sign In"> -->
+                        </div>
+
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <!-- Order -->
+            <div class="order__container">
+               <div class="order__accordion">
+                  <div class="order__account">
+                     <img class="order__account-img" src="img/User.svg" alt="">
+                     <div class="order__account-row">
+                        <h2 class="order__account-title">Account</h2>
+                     </div>
+                     <div class="order__account-item hidden">
+                        <p class="order__account-text">
+                           To place your order now, log in to your existing account or sign up.
+                        </p>
+                        <button class="order__account-btns">
+                           Have an account ?<br>
+                           <span> Log in</span>
+                        </button>
+                        <button class="order__account-btns">
+                           New to Mania ?<br>
+                           <span>Sign in</span>
+                        </button>
+                     </div>
+
+
+
+                  </div>
+
+                  <!-- <div class="order__account">
+                     <div class="order__account-img">
+                       
+                     </div>
+                     <div class="order__account-row">
+                        <h2 class="order__account-title">Account</h2>
+                     </div>
+                     <div class="order__account-accordion hidden">
+                        <p class="order__account-text">
+                           To place your order now, log in to your existing account or sign up.
+                        </p>
+                        <button class="order__account-btns">
+                           Have an account ?<br>
+                           <span> Log in</span>
+                        </button>
+                        <button class="order__account-btns">
+                           New to Mania ?<br>
+                           <span>Sign in</span>
+                        </button>
+                     </div>
+
+                  </div> -->
+
+               </div>
+
+
+            </div>
+
+
+
+
+         </section>
+      </main>
+   </div>
+
+   <script src="js/script.js"></script>
+</body>
+
+</html>
