@@ -1,0 +1,127 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 60;
+}
+.header_scroll {
+  background: #FFF;
+}
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.header__logo {
+  position: relative;
+  z-index: 40;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .menu__icon {
+    display: flex;
+    align-items: center;
+    z-index: 50;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .menu__icon span, .menu__icon::before, .menu__icon::after {
+    right: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background: #fff;
+  }
+  .menu__icon_black span, .menu__icon_black::before, .menu__icon_black::after {
+    right: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background: #000;
+  }
+  .menu__icon::before, .menu__icon::after {
+    content: "";
+    height: 2px;
+  }
+  .menu__icon::before {
+    top: 8px;
+  }
+  .menu__icon::after {
+    bottom: 8px;
+    height: 2px;
+  }
+  .menu__icon span {
+    height: 2px;
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+  .menu__icon_active span {
+    transform: rotate(45deg) scale(0) translate(0px, -50%);
+  }
+  .menu__icon_active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+  .menu__icon_active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+  }
+}
+@media (max-width: 991px) {
+  .menu__body {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 100px 15px 0;
+    background: #FFF;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+  }
+  .menu__body_active {
+    left: 0;
+  }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 16;
+  }
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 991px) {
+  .menu__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+.menu__link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+}
+@media (max-width: 991px) {
+  .menu__link {
+    color: #000;
+  }
+}

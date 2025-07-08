@@ -1,0 +1,91 @@
+@mixin hover-link {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    background-color: #151515;
+  }
+
+  &:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+
+}
+
+@mixin hover-tab {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    background-color: #0756e0;
+    ;
+  }
+
+  &:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    color: #0756e0;
+  }
+
+}
+
+@mixin error {
+  color: #fff;
+  background: #bf0a13;
+  padding: 3px 10px;
+  position: absolute;
+  bottom: -17px;
+  left: 15px;
+  border-radius: 5px;
+  z-index: 2;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+
+  &::after {
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    display: block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #bf0a13;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+}
+
+@mixin svg {
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin img {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
